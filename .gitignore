@@ -1,0 +1,17 @@
+# .NET
+backend/**/bin/
+backend/**/obj/
+*.db
+*.db-shm
+*.db-wal
+
+# Node / Vite
+frontend/node_modules/
+frontend/dist/
+node_modules/
+
+# Env
+*.local
+.env
+.env.*
+!.env.example
