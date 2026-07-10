@@ -17,6 +17,12 @@ case and requirements.
 - The React dev server proxies `/api` → `http://localhost:5045` (see `frontend/vite.config.ts`,
   override with `VITE_API_TARGET`). Backend CORS also allows any origin in dev.
 
+## Documentation
+
+- Human setup guide: `docs/HOW_TO_SETUP.md` (also Admin → How to Setup in the UI)
+- Software / API docs: `docs/SOFTWARE.md` (also Admin → Software Documentation)
+- Mirrored for the web app at `frontend/public/docs/` — keep both copies in sync when editing
+
 ## Running (standard commands)
 
 - Backend: from `backend/`, `dotnet run --project HousingAppointment.Api --urls http://0.0.0.0:5045`

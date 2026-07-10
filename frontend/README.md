@@ -1,32 +1,28 @@
-# React + TypeScript + Vite
+# Frontend — Housing Appointment Booking
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+React 19 + Vite + TypeScript UI for the tenant booking flow and Admin documentation menu.
 
-Currently, two official plugins are available:
+## Run
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Prerequisites and full steps: see [../../docs/HOW_TO_SETUP.md](../../docs/HOW_TO_SETUP.md).
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+pnpm install
+pnpm dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Open http://localhost:5173 (backend must be running on port 5045).
+
+## Admin menu
+
+In the app header: **Admin → How to Setup** or **Admin → Software Documentation**.  
+Docs are loaded from `public/docs/` (mirrors of the repo `docs/` folder).
+
+## Scripts
+
+| Command | Purpose |
+|---------|---------|
+| `pnpm dev` | Dev server |
+| `pnpm build` | Production build |
+| `pnpm lint` | Oxlint |
+| `pnpm preview` | Preview production build |
