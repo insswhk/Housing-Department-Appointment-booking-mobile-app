@@ -42,3 +42,8 @@ case and requirements.
 - Booking slots are seeded relative to "today", so available slots always appear in the future.
 - Run the two dev servers in separate tmux sessions; both must be running for the web booking
   flow to work (frontend calls the backend through the `/api` proxy).
+- Launch the backend from the `backend/` directory, not from `backend/HousingAppointment.Api/`;
+  the `--project HousingAppointment.Api` path in the run command is relative to `backend/`.
+- The Cloud VM startup update script already runs `pnpm --dir frontend install` and
+  `dotnet restore backend/HousingAppointment.sln`, so dependencies are current on boot — you can
+  go straight to running/testing the services without reinstalling.
